@@ -52,13 +52,13 @@ class Net(nn.Module):
         self.pool3 = nn.MaxPool2d(2, 2)
         
         # 20 outputs * the 5*5 filtered/pooled map size
-        self.fc1 = nn.Linear(32*26*26, 50)
+        self.fc1 = nn.Linear(32*26*26, 1024)
         
         # dropout with p=0.4
         self.fc1_drop = nn.Dropout(p=0.4)
         
         # finally, create 136 output channels (for the 136 classes)
-        self.fc2 = nn.Linear(50, 136)
+        self.fc2 = nn.Linear(1024, 136)
         
         
         
