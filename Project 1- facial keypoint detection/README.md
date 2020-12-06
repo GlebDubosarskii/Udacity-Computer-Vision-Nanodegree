@@ -4,7 +4,7 @@ This project consists of localizing faces in the image and finding 66 facial poi
 from workspace_utils import active_session
 with active_session () :.
 
-![detected_faces](https://github.com/GlebDubosarskii/Udacity-Computer-Vision-Nanodegree/blob/main/Project%201-%20facial%20keypoint%20detection/images/detected_faces.png)
+<center>![detected_faces](https://github.com/GlebDubosarskii/Udacity-Computer-Vision-Nanodegree/blob/main/Project%201-%20facial%20keypoint%20detection/images/detected_faces.png)
 
-![detected_points1](https://github.com/GlebDubosarskii/Udacity-Computer-Vision-Nanodegree/blob/main/Project%201-%20facial%20keypoint%20detection/images/detected_points1.png)
-![detected_points2](https://github.com/GlebDubosarskii/Udacity-Computer-Vision-Nanodegree/blob/main/Project%201-%20facial%20keypoint%20detection/images/detected_points2.png)
+<center>![detected_points1](https://github.com/GlebDubosarskii/Udacity-Computer-Vision-Nanodegree/blob/main/Project%201-%20facial%20keypoint%20detection/images/detected_points1.png)
+<center>![detected_points2](https://github.com/GlebDubosarskii/Udacity-Computer-Vision-Nanodegree/blob/main/Project%201-%20facial%20keypoint%20detection/images/detected_points2.png)
