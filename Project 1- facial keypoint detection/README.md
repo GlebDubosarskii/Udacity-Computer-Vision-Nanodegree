@@ -6,10 +6,10 @@ with active_session () :.
 
 
 
-![obamas](E:\ML new\Udacity computer vision\Udacity-Computer-Vision-Nanodegree\Project 1- facial keypoint detection\images\obamas.jpg)
+![obamas](\images\obamas.jpg)
 
-![detected_faces](E:\ML new\Udacity computer vision\Udacity-Computer-Vision-Nanodegree\Project 1- facial keypoint detection\images\detected_faces.png)
+![detected_faces](\images\detected_faces.png)
 
-![detected_points1](E:\ML new\Udacity computer vision\Udacity-Computer-Vision-Nanodegree\Project 1- facial keypoint detection\images\detected_points1.png)
+![detected_points1](\images\detected_points1.png)
 
-![detected_points2](E:\ML new\Udacity computer vision\Udacity-Computer-Vision-Nanodegree\Project 1- facial keypoint detection\images\detected_points2.png)
+![detected_points2](\images\detected_points2.png)
