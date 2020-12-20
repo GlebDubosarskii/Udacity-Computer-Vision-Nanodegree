@@ -31,6 +31,8 @@ class DecoderRNN(nn.Module):
         self.vocab_size=vocab_size
         self.num_layers=num_layers  
         
+        self.batch_size=0
+        
         # Embedded layer
         self.embedding_nn = nn.Embedding(vocab_size, embed_size)
         
@@ -77,9 +79,13 @@ class DecoderRNN(nn.Module):
         return self.fc(lstm_output)
         
 
+    
     def sample(self, inputs, states=None, max_len=20):
         
         '''Caption generation'''
+        
+        #batch size
+        self.batch_size=inputs.shape[0]
         
         #initialize the hidden LSTM layer with zeros
         self.hidden_layer_lstm=self.init_hidden(self.batch_size)
@@ -87,8 +93,8 @@ class DecoderRNN(nn.Module):
         #resulting word vector 
         word_list=[]
         
-        #Since there are no captions during test, self.embedding_nn is not used! We propogate word vectors one by one through LSTM
-        #using previous word vector as as input.
+        #We propogate word vectors one by one through LSTM
+        #using previous word vector as an input.
         
         with torch.no_grad(): # no gradient propagation
             for i in range(max_len):
@@ -96,14 +102,16 @@ class DecoderRNN(nn.Module):
                 
                 #get the word number as the maximum value index
                 word = self.fc(lstm_output).squeeze(1).argmax(dim=1)
-                word_list.append(word)
+                
+                word_list.append(word.item())
+                
+                #propagate new word through self.embedding_nn 
+                inputs = self.embedding_nn(word.unsqueeze(0))
                 
                 #if <END> is reached then break the cycle
                 if word == 1:
                     break
                     
         return word_list
-        
-        
-        
+    
         
